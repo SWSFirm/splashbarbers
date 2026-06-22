@@ -20,7 +20,7 @@ body{
 }
 
 .splashloginmenu {    
-  background :Url(images/backdropgreen.png);   
+  background: url(images/backdropgreen.png);   
   
   overflow: hidden;
 }
