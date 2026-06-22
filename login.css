@@ -26,7 +26,7 @@ main{
 body{
   width:1920px;
   height:1080px;
-  font-family: 'Century Gothic', sans-serif;
+  font-family: 'Century Gothic';
   font-weight: 500;
   margin:0;   
   overflow: hidden;
