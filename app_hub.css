@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('fonts/Century_Gothic_Regular.TTF') format('TTF');       
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('fonts/Century_Gothic_Bold.TTF') format('TTF');
+  font-weight: bold;
+}
+
 *,
 *::before,*::after{
   box-sizing: border-box;
@@ -16,7 +28,7 @@ main{
 body{
   width: 1920px;
   height: 1080px;
-  font-family: 'Century Gothic', 'roboto light', sans-serif;
+  font-family: 'Century Gothic', sans-serif;
   font-weight: 500;
   margin:0;   
   overflow: hidden;
