@@ -1,0 +1,138 @@
+*,
+*::before,*::after{
+  box-sizing: border-box;
+}
+
+main{
+
+    overflow-x: clip;
+}
+
+.flex{
+
+    display:flex;
+}
+
+body{
+  width: 1920px;
+  height: 1080px;
+  font-family: 'roboto light',sans-serif ;
+  font-weight: 500;
+  margin:0;   
+  overflow: hidden;
+}
+
+.splashapphub {  
+ 
+  overflow: hidden;
+  background: #ffffff;
+}
+
+
+.sidebarui {  
+  width: 284px;
+  height: 1920px;
+  background: #4cba5d;
+}
+
+.activity-area_ui {  
+  width: 1636px;
+  height: 1920px;
+  background: #fff;
+  
+}
+
+.mainapplogo {
+  margin-top: 173px;
+  margin-bottom: 16px;
+  margin-left: 400px;
+  margin-right: 600px;  
+  width: 364px;
+  height: 135px;  
+  background-size: 364px 135px;
+}
+
+.developeddesignedbys {  
+  margin-top: 0;
+  margin-left: 577px;
+  margin-right: 510px;  
+  margin-bottom: 400px;
+  width: 409px;
+  height: 20px;
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;  
+  white-space: nowrap;
+  text-align: center;
+  color: #4c3797;
+}
+
+.appbarbericon {
+    margin-top: 15px ;
+    margin-left: 8px ;
+    margin-right: 13px ;
+      
+  width: 63px;
+  height: 63px;
+  
+}
+
+.sidebarlogosplashbar {
+   margin-top: 15px ;
+    margin-left: 8px ;
+    margin-right: 13px ;
+    margin-bottom: 0 ;  
+  width: 178px;
+  height: 66px;
+  
+}
+
+.margin-bottom_for_app-bar_and_Sidebar_Logo{
+
+    margin-bottom: 60px ;
+}
+
+.Sidebar_button {
+  margin: 2px;
+  width: 279px;
+  height: 60px;
+  border-radius: 5px;
+  background: #4c3797;
+  border-width: 1px;
+}
+
+.Sidebar_button:hover {
+
+    background: #4cba5d;   
+    border: #4c3797;
+    border-width: 1px;
+
+}
+
+.button_icon {
+  
+  margin-right: 16.5px;
+  width: 55px;
+  height: 55px;
+  
+}
+
+.side-button_text {
+  
+  width: 41px;
+  height: 25px;
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  white-space: nowrap;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+
+
+

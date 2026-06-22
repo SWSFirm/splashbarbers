@@ -1,0 +1,125 @@
+
+*,
+*::before,*::after{
+  box-sizing: border-box;
+}
+
+main{
+
+    overflow-x: clip;
+}
+
+
+body{
+  width:1920px;
+  height:1080px;
+  font-family: 'roboto light',sans-serif ;
+  font-weight: 500;
+  margin:0;   
+  overflow: hidden;
+}
+
+.splashloginmenu {    
+  background :Url(/images/backdropgreen.png);   
+  
+  overflow: hidden;
+}
+
+.applogo {
+  margin-bottom: 55px;
+  width: 364px;
+  height: 135px;  
+  background-size: 364px 135px;
+}
+
+.position_center{
+  margin-top: 300px;
+  margin-bottom: 165px; 
+  margin-left: 800px;
+  margin-right: 960px;
+  justify-content: center;
+}
+
+.enterusernametextbox {  
+  width: 364px;
+  height: 53px;
+  font-family:'Century Gothic';
+  border-radius: 5px;
+  background: #ffffff;
+  border: 1px  solid #4c3797;  
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 26px;
+  margin-bottom: 31px;
+}
+
+.enterpasswordtextbox {
+  width: 364px;
+  height: 53px;
+  font-family:'Century Gothic';
+  border-radius: 5px;
+  background: #ffffff;
+  border: 1px  solid #4c3797;  
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 26px;
+  margin-bottom: 31px;
+}
+
+.loginbutton {
+ 
+  font-weight: bold;
+  font-size: 16px;
+  width: 364px;
+  height: 53px;
+  border-radius: 5px;
+  background: #4cba5d;
+  border: 1px  solid #4cba5d;
+}
+
+.loginbutton:hover {
+ 
+  font-weight: bold;
+  font-size: 16px;
+  width: 364px;
+  height: 53px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px  solid #4c3797;
+}
+
+.forgotpassword { 
+  margin-left: 119px;
+  margin-right: 119px;
+  justify-content: center;
+  width: 126px;
+  height: 20px;
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  white-space: nowrap;
+  color: #4c3797;
+}
+.forgotpassword:hover{
+
+  color: #4cba5d;
+
+}
+
+.developeddesignedbys { 
+
+  margin-left:16px;
+  margin-right:855px;
+  margin-bottom: 0;
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;    
+  text-align: left;
+  color: #4c3797;
+}
+
+
+
