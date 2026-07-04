@@ -10,11 +10,13 @@
   </head>
   <body> 
     <main class="splashapphub">
-        <div class="flex">
-          <div class="sidebarui">
+        <div class="flex app-layout">
+          <nav class="sidebarui" id="sidebar" aria-label="Main navigation">
             <div class="flex margin-bottom_for_app-bar_and_Sidebar_Logo">
-                <img src="images/membersofstaff.png" class="appbarbericon"/>
-                <img src="images/SplasMainFile.png" class="sidebarlogosplashbar" />
+                <button class="sidebar-toggle" type="button" aria-label="Collapse navigation menu" aria-controls="sidebar" aria-expanded="true">
+                  <img src="images/membersofstaff.png" class="appbarbericon" alt="" />
+                </button>
+                <img src="images/SplasMainFile.png" class="sidebarlogosplashbar" alt="Splash Barbershop" />
             </div>
 
             <a class="Sidebar_button flex">
@@ -46,9 +48,9 @@
                 <p class="side-button_text">Logout</p>
             </a>
 
-          </div>
+          </nav>
           <div class="activity-area_ui">
-               <img src="images/SplasMainFile.png" class="mainapplogo" />
+               <img src="images/SplasMainFile.png" class="mainapplogo" alt="Splash Barbershop" />
                <p class="developeddesignedbys">Developed|designed By Simulakra Technologies LTD</p>
           </div>
 
@@ -56,4 +58,30 @@
            
            
     </main>
+    <script>
+      const sidebar = document.querySelector("#sidebar");
+      const sidebarToggle = document.querySelector(".sidebar-toggle");
+
+      const setSidebarState = (isCollapsed) => {
+        sidebar.classList.toggle("collapsed", isCollapsed);
+        sidebarToggle.setAttribute("aria-expanded", String(!isCollapsed));
+        sidebarToggle.setAttribute(
+          "aria-label",
+          isCollapsed ? "Expand navigation menu" : "Collapse navigation menu"
+        );
+      };
+
+      const phoneLayout = window.matchMedia("(max-width: 700px)");
+
+      setSidebarState(phoneLayout.matches);
+
+      phoneLayout.addEventListener("change", (event) => {
+        setSidebarState(event.matches);
+      });
+
+      sidebarToggle.addEventListener("click", () => {
+        setSidebarState(!sidebar.classList.contains("collapsed"));
+      });
+    </script>
   </body>
+</html>

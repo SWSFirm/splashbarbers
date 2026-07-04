@@ -1,150 +1,307 @@
 @font-face {
-  font-family: 'Century Gothic';
-  src: url('fonts/Century_Gothic_Regular.TTF') format('TTF');       
-  font-weight: normal;
+  font-family: "Century Gothic";
+  src: url("fonts/Century_Gothic_Regular.TTF") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Century Gothic';
-  src: url('fonts/Century_Gothic_Bold.TTF') format('TTF');
-  font-weight: bold;
+  font-family: "Century Gothic";
+  src: url("fonts/Century_Gothic_Bold.TTF") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 *,
-*::before,*::after{
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-main{
-
-    overflow-x: clip;
+html,
+body {
+  min-height: 100%;
 }
 
-.flex{
-
-    display:flex;
-}
-
-body{
-  width: 1920px;
-  height: 1080px;
-  font-family: 'Century Gothic', sans-serif;
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Century Gothic", Arial, sans-serif;
   font-weight: 500;
-  margin:0;   
-  overflow: hidden;
 }
 
-.splashapphub {  
- 
-  overflow: hidden;
-  background: #ffffff;
+.flex {
+  display: flex;
 }
 
-
-.sidebarui {  
-  width: 284px;
-  height: 1920px;
-  background: #4cba5d;
+.splashapphub,
+.app-layout {
+  min-height: 100vh;
+  min-height: 100svh;
 }
 
-.activity-area_ui {  
-  width: 1636px;
-  height: 1920px;
+.splashapphub {
+  overflow-x: hidden;
   background: #fff;
-  
 }
 
-.mainapplogo {
-  margin-top: 173px;
-  margin-bottom: 16px;
-  margin-left: 400px;
-  margin-right: 600px;  
-  width: 364px;
-  height: 135px;  
-  background-size: 364px 135px;
+.sidebarui {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  flex: 0 0 284px;
+  width: 284px;
+  height: 100vh;
+  height: 100svh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #4cba5d;
+  transition: width 0.25s ease, flex-basis 0.25s ease;
 }
 
-.developeddesignedbys {  
-  margin-top: 0;
-  margin-left: 577px;
-  margin-right: 510px;  
-  margin-bottom: 400px;
-  width: 409px;
-  height: 20px;
-  font-family: 'Century Gothic';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;  
-  white-space: nowrap;
-  text-align: center;
-  color: #4c3797;
+.margin-bottom_for_app-bar_and_Sidebar_Logo {
+  align-items: flex-start;
+  margin-bottom: clamp(28px, 5.5vh, 60px);
+}
+
+.sidebar-toggle {
+  flex: 0 0 53px;
+  width: 53px;
+  height: 53px;
+  margin: 15px 5px 5px;
+  padding: 0;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background: transparent;
+  animation: toggle-border-blink 2s steps(1, end) infinite;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-toggle:hover,
+.sidebar-toggle:focus-visible {
+  background: rgba(255, 255, 255, 0.2);
+  outline: 2px solid #4c3797;
+  outline-offset: 2px;
+}
+
+@keyframes toggle-border-blink {
+  0%,
+  49.99% {
+    border-color: #fff;
+  }
+
+  50%,
+  100% {
+    border-color: transparent;
+  }
 }
 
 .appbarbericon {
-    margin-top: 15px ;
-    margin-left: 8px ;
-    margin-right: 13px ;
-      
-  width: 63px;
-  height: 63px;
-  
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .sidebarlogosplashbar {
-   margin-top: 15px ;
-    margin-left: 8px ;
-    margin-right: 13px ;
-    margin-bottom: 0 ;  
+  flex: 0 0 178px;
   width: 178px;
-  height: 66px;
-  
-}
-
-.margin-bottom_for_app-bar_and_Sidebar_Logo{
-
-    margin-bottom: 60px ;
+  height: auto;
+  margin: 15px 13px 0 0;
+  transition: opacity 0.15s ease;
 }
 
 .Sidebar_button {
-  margin: 2px;
-  width: 279px;
+  align-items: center;
+  width: calc(100% - 5px);
   height: 60px;
+  margin: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #4c3797;
   border-radius: 5px;
   background: #4c3797;
-  border-width: 1px;
+  color: #fff;
+  text-decoration: none;
+  transition: width 0.25s ease, background-color 0.2s ease;
 }
 
-.Sidebar_button:hover {
-
-    background: #4cba5d;   
-    border: #4c3797;
-    border-width: 1px;
-
+.Sidebar_button:hover,
+.Sidebar_button:focus-visible {
+  background: #4cba5d;
+  outline: 2px solid #4c3797;
+  outline-offset: -2px;
 }
 
 .button_icon {
-  
-  margin-right: 16.5px;
+  flex: 0 0 55px;
   width: 55px;
   height: 55px;
-  
+  margin-right: 16px;
+  object-fit: contain;
 }
 
 .side-button_text {
-  
-  width: 41px;
-  height: 25px;
-  font-family: 'Century Gothic';
-  font-style: normal;
-  font-weight: 700;
+  margin: 0;
+  color: #fff;
   font-size: 20px;
-  line-height: 24px;
+  font-weight: 700;
+  line-height: 1.2;
   white-space: nowrap;
-  text-align: center;
-  color: #ffffff;
+  transition: opacity 0.15s ease;
 }
 
+.sidebarui.collapsed {
+  flex-basis: 67px;
+  width: 67px;
+}
 
+.sidebarui.collapsed .sidebarlogosplashbar,
+.sidebarui.collapsed .side-button_text {
+  opacity: 0;
+  pointer-events: none;
+}
 
+.sidebarui.collapsed .Sidebar_button {
+  width: 63px;
+}
 
+.sidebarui.collapsed .sidebar-toggle {
+  animation: none;
+}
 
+.activity-area_ui {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(72px, 16vh, 173px) clamp(16px, 4vw, 64px) 32px;
+  background: #fff;
+  text-align: center;
+}
+
+.mainapplogo {
+  display: block;
+  width: min(364px, 80%);
+  height: auto;
+  margin: 0 auto 16px;
+}
+
+.developeddesignedbys {
+  max-width: 100%;
+  margin: 0 auto;
+  color: #4c3797;
+  font-size: clamp(12px, 1.4vw, 16px);
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .sidebarui:not(.collapsed) {
+    flex-basis: 240px;
+    width: 240px;
+  }
+
+  .sidebarlogosplashbar {
+    flex-basis: 145px;
+    width: 145px;
+    margin-right: 8px;
+  }
+
+  .activity-area_ui {
+    padding-top: clamp(70px, 14vh, 130px);
+  }
+}
+
+/* Phone: JavaScript starts the sidebar in its collapsed icon-only state. */
+@media (max-width: 700px) {
+  .sidebar-toggle {
+    margin-top: 5px;
+  }
+
+  .activity-area_ui {
+    padding: clamp(56px, 12vh, 100px) 16px 24px;
+  }
+
+  .mainapplogo {
+    width: min(300px, 88%);
+  }
+
+  .developeddesignedbys {
+    font-size: 12px;
+  }
+}
+
+/* Small phone */
+@media (max-width: 420px) {
+  .sidebarui.collapsed {
+    flex-basis: 59px;
+    width: 59px;
+  }
+
+  .sidebarui.collapsed .Sidebar_button {
+    width: 55px;
+  }
+
+  .sidebarui.collapsed .sidebar-toggle {
+    width: 45px;
+    height: 45px;
+  }
+
+  .sidebarui.collapsed .Sidebar_button {
+    height: 54px;
+  }
+
+  .sidebarui.collapsed .button_icon {
+    flex-basis: 49px;
+    width: 49px;
+    height: 49px;
+  }
+
+  .activity-area_ui {
+    padding-inline: 12px;
+  }
+}
+
+/* Short screens and landscape phones */
+@media (max-height: 600px) {
+  .margin-bottom_for_app-bar_and_Sidebar_Logo {
+    margin-bottom: 16px;
+  }
+
+  .sidebarlogosplashbar {
+    margin-top: 8px;
+  }
+
+  .Sidebar_button {
+    height: 52px;
+  }
+
+  .button_icon {
+    flex-basis: 48px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .activity-area_ui {
+    padding-top: 32px;
+  }
+
+  .mainapplogo {
+    width: min(280px, 70%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebarui,
+  .Sidebar_button,
+  .sidebarlogosplashbar,
+  .side-button_text {
+    transition: none;
+  }
+}
